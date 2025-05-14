@@ -188,15 +188,16 @@ const Dataentry = ({ onDataSubmitted }) => {
                     />
                 </div>
 
-                <div className='mt-8'>
-                    <h2>{dataVals[4].label}</h2>
-                    <input
-                        type="text"
-                        value={dataVals[4].value}
-                        onChange={(e) => handleChange(e, "Profit Target")}
-                        className=" w-[270px] md:w-[250px] lg:w-[370px] h-[30px] bg-gray-400 border-none p-[10px] m-[15px]"
-                    />
+                <div className="mt-6 flex flex-col items-start sm:items-center">
+                  <h2 className="text-base sm:text-lg mb-2">{dataVals[4].label}</h2>
+                  <input
+                    type="text"
+                    value={dataVals[4].value}
+                    onChange={(e) => handleChange(e, "Profit Target")}
+                    className="w-full max-w-[270px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[370px] h-10 bg-gray-400 border-none p-2 rounded"
+                  />
                 </div>
+
 
                 <div className='mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
                     <div>

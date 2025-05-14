@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {AnimatePresence, motion } from 'framer-motion'
 import Dataentry from './Dataentry'
+import myimage from '../assets/myimage.jpg';
 import {BarChart2, ShoppingBag, Users, Zap, Menu, Settings, User, TrendingUp} from 'lucide-react';
 import {useNavigate, Link } from 'react-router-dom';
 
@@ -71,7 +72,7 @@ const Profile = ({ setLoggedin, onDataSubmitted}) => {
 
                 <div className='flex h-auto items-center'>
                     <div className=''>
-                        <img src='./src/assets/WhatsApp Image 2025-04-06 at 16.34.22_10964702.jpg' className='rounded-full  border-2 border-white size-20 sm:w-[185px] sm:h-[175px]' />
+                        <img src={myimage} className='rounded-full  border-2 border-white size-20 sm:w-[185px] sm:h-[175px]' />
                     </div>
 
                     <div className='p-6 '>
