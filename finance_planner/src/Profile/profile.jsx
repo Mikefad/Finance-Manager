@@ -70,9 +70,9 @@ const Profile = ({ setLoggedin, onDataSubmitted}) => {
                     <span className='pl-4'> Profile </span>
                 </div>
 
-                <div className='flex h-auto items-center'>
+                <div className='flex h-auto flex-col items-center sm:flex-row'>
                     <div className=''>
-                        <img src={myimage} className='rounded-full  border-2 border-white size-20 sm:w-[185px] sm:h-[175px]' />
+                        <img src={myimage} className='rounded-full  border-2 border-white size-30 sm:w-[185px] sm:h-[175px]' />
                     </div>
 
                     <div className='p-6 '>
@@ -82,14 +82,19 @@ const Profile = ({ setLoggedin, onDataSubmitted}) => {
 
                 </div>
 
-                <div className='flex gap-7 mt-2 py-4 pl-[10px] sm:pl-[225px] '>
-                    
-                    <button className='bg-[#8B5CF6] py-2 px-3 rounded-md' onClick={() => setOpenform(!Openform)}> Data Input </button>
-                    <button className='bg-[#8B5CF6] py-2 px-3 rounded-md' onClick={handleLogout}> Logout </button>
+                <div className='flex gap-7 mt-2 py-4 pl-[10px] justify-center sm:justify-start sm:pl-[225px]'>
+                <button className='bg-[#8B5CF6] py-2 px-3 rounded-md' onClick={() => setOpenform(!Openform)}>
+                    Data Input
+                </button>
+                <button className='bg-[#8B5CF6] py-2 px-3 rounded-md' onClick={handleLogout}>
+                    Logout
+                </button>
                 </div>
+
                 
             </motion.div>
 
+            
             
             {Openform && <Dataentry onDataSubmitted={onDataSubmitted} />}
 

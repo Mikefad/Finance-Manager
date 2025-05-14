@@ -178,18 +178,18 @@ const Dataentry = ({ onDataSubmitted }) => {
                    
                 </label>
 
-                <div className='mt-8'>
-                    <h2>{dataVals[3].label}</h2>
-                    <input
-                        type="text"
-                        value={dataVals[3].value}
-                        onChange={(e) => handleChange(e, "Revenue")}
-                        className=" w-[270px] md:w-[350px] lg:w-[500px] h-[30px] bg-gray-400 border-none p-[10px] m-[15px]"
-                    />
+                <div className="mt-6 flex flex-col items-start ">
+                  <h2 className="text-base sm:text-md mb-2">{dataVals[3].label}</h2>
+                  <input
+                    type="text"
+                    value={dataVals[3].value}
+                    onChange={(e) => handleChange(e, "Revenue")}
+                    className="w-full max-w-[270px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[370px] h-10 bg-gray-400 border-none p-2 rounded"
+                  />
                 </div>
 
-                <div className="mt-6 flex flex-col items-start sm:items-center">
-                  <h2 className="text-base sm:text-lg mb-2">{dataVals[4].label}</h2>
+                <div className="mt-6 flex flex-col ">
+                  <h2 className="text-base sm:text-md mb-2">{dataVals[4].label}</h2>
                   <input
                     type="text"
                     value={dataVals[4].value}
@@ -206,7 +206,7 @@ const Dataentry = ({ onDataSubmitted }) => {
                             type="text"
                             value={dataVals[5].value}
                             onChange={(e) => handleChange(e, "Lodging")}
-                            className="h-[30px] bg-gray-400 border-none p-[10px] m-[15px]"
+                            className="h-8 bg-gray-400 border-none p-[10px] my-[15px] rounded"
                         />
                     </div>
 
@@ -216,7 +216,7 @@ const Dataentry = ({ onDataSubmitted }) => {
                             type="text"
                             value={dataVals[6].value}
                             onChange={(e) => handleChange(e, "Drinks")}
-                            className="h-[30px] bg-gray-400 border-none p-[10px] m-[15px]"
+                            className="h-8 bg-gray-400 border-none p-[10px] my-[15px] rounded"
                         />
                     </div>
 
@@ -226,7 +226,7 @@ const Dataentry = ({ onDataSubmitted }) => {
                             type="text"
                             value={dataVals[7].value}
                             onChange={(e) => handleChange(e, "Hall_Renting")}
-                            className="h-[30px] bg-gray-400 border-none p-[10px] m-[15px]"
+                            className="h-8 bg-gray-400 border-none p-[10px] my-[15px] rounded"
                         />
                     </div>
 
@@ -236,20 +236,21 @@ const Dataentry = ({ onDataSubmitted }) => {
                             type="text"
                             value={dataVals[8].value}
                             onChange={(e) => handleChange(e, "Orders")}
-                            className="h-[30px] bg-gray-400 border-none p-[10px] m-[15px]"
+                            className="h-8 bg-gray-400 border-none p-[10px] my-[15px] rounded"
                         />
                     </div>
 
                 </div>
 
-                <div className='mt-15'>
+                <div className='mt-15 sm:text-md '>
 
                     <Togglebutton label="Expenses" isOn={switchOn} isToggled={() => setswitchOn(!switchOn)}/>
                     
                 </div>
                 
                 
-                {switchOn &&  <><input type="text" value={dataVals[9].value} onChange={(e) => handleChange(e, "Expenses")} className="w-[270px] md:w-[350px] lg:w-[500px] h-[30px] bg-gray-400 border-none p-[10px] m-[15px]"/>
+                {switchOn &&  <><input type="text" value={dataVals[9].value} onChange={(e) => handleChange(e, "Expenses")} className="w-full max-w-[270px] sm:max-w-[300px] md:max-w-[350px] lg:max-w-[370px] h-10 bg-gray-400 border-none p-2 my-[15px] rounded"/>
+
                 
                 <div className='mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'>
                     <div>
@@ -258,7 +259,7 @@ const Dataentry = ({ onDataSubmitted }) => {
                             type="text"
                             value={dataVals[10].value}
                             onChange={(e) => handleChange(e, "Staff")}
-                            className=" h-[30px] w-[200px] sm:w-[143px] bg-gray-400 border-none p-[10px] m-[15px]"
+                            className=" h-[30px] w-[200px] sm:w-[143px] bg-gray-400 border-none p-[10px] my-[15px] rounded"
                         />
                     </div>
 
@@ -268,7 +269,7 @@ const Dataentry = ({ onDataSubmitted }) => {
                             type="text"
                             value={dataVals[11].value}
                             onChange={(e) => handleChange(e, "Drinks_purch")}
-                            className=" h-[30px] w-[200px] sm:w-[143px] bg-gray-400 border-none p-[10px] m-[15px]"
+                            className=" h-[30px] w-[200px] sm:w-[143px] bg-gray-400 border-none p-[10px] my-[15px] rounded"
                         />
                     </div>
 
@@ -278,7 +279,7 @@ const Dataentry = ({ onDataSubmitted }) => {
                             type="text"
                             value={dataVals[12].value}
                             onChange={(e) => handleChange(e, "Entertainment")}
-                            className=" h-[30px] w-[200px] sm:w-[143px] bg-gray-400 border-none p-[10px] m-[15px]"
+                            className=" h-[30px] w-[200px] sm:w-[143px] bg-gray-400 border-none p-[10px] my-[15px] rounded"
                         />
                     </div>
                     
@@ -288,7 +289,7 @@ const Dataentry = ({ onDataSubmitted }) => {
                             type="text"
                             value={dataVals[13].value}
                             onChange={(e) => handleChange(e, "Power")}
-                            className=" h-[30px] w-[200px] sm:w-[143px] bg-gray-400 border-none p-[10px] m-[15px]"
+                            className=" h-[30px] w-[200px] sm:w-[143px] bg-gray-400 border-none p-[10px] my-[15px] rounded"
                         />
                     </div>
                   
@@ -302,7 +303,7 @@ const Dataentry = ({ onDataSubmitted }) => {
                             type="text"
                             value={dataVals[14].value}
                             onChange={(e) => handleChange(e, "Web_Presence")}
-                            className="h-[30px] bg-gray-400 border-none p-[10px] m-[15px]"
+                            className="h-[30px] bg-gray-400 border-none p-[10px] my-[15px] rounded"
                         />
                     </div>
                 </div>
